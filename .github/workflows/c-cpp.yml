@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: update
+      run: sudo apt-get update
+    - name: upgrade
+      run: sudo apt=get upgrade
+    - name: install1
+      run: sudo apt-get install gcc-arm-none-eabi
+    - name: install2
+      run: sudo apt-get install make
+    - name: make
+      run: make
