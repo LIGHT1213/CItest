@@ -36,7 +36,7 @@ jobs:
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: ${{ secrets.980807Pch}}
+        repo_token: ${{ secrets.019facad1e1cdf3109f4afb56de43948e2f6b455}}
         file: ./artifact/firmware/*
         tag: ${{ github.ref }}
         file_glob: true
